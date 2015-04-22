@@ -1,0 +1,31 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>   
+    #import "GlobalMacro.h"
+    #import "GlobalString.h"
+    #import "GlobalNotification.h"
+    #import "UIImageView+WebCache.h"
+    #import "SDImageCache.h"
+    #import "SVProgressHUD.h"
+    #import <HHFrameWorkKit/HHFrameWorkKit.h>
+    #import "UserModel.h"
+
+//    #import <HHCommonClass/FMDatabase.h>
+//    #import <HHNetWorkKit/HHNetWorkKitHeader.h>
+//    #import <HHUIKit/HHCustomeViews.h>
+//    #import <HHUtils/CategoryUtils.h>
+    #import"UIViewController+HHSoft.h"
+    #import "HHGlobalVarTool.h"
+#endif
