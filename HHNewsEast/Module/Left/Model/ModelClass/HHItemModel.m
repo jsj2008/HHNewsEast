@@ -33,8 +33,8 @@
     
         //NSString *versionString= [[infoDictionary objectForKey:@"CFBundleVersion"] stringByAppendingString:@")"];
 //    HHItemModel  *updateModel=[[HHItemModel alloc]  initWithItemTitle:[@"检测更新(" stringByAppendingString:versionString] type:HHItemTypeCheckUpdate];
-     HHItemModel  *updateModel=[[HHItemModel alloc]  initWithItemTitle:@"检测更新" type:HHItemTypeCheckUpdate];
-    [itemsArray1 addObject:updateModel];
+//     HHItemModel  *updateModel=[[HHItemModel alloc]  initWithItemTitle:@"检测更新" type:HHItemTypeCheckUpdate];
+//    [itemsArray1 addObject:updateModel];
     /*
     HHItemModel  *feedBackModel=[[HHItemModel alloc]  initWithItemTitle:@"意见反馈 " type:HHItemTypeFeedBack];
     [itemsArray1 addObject:feedBackModel];
