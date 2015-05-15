@@ -14,6 +14,7 @@
 #import "NewsDetailViewController.h"
 @interface NewsListViewController ()
 @property(nonatomic,strong)HHContentView *contentView;
+@property(nonatomic,strong)UIImageView *bgImageView;
 @end
 
 @implementation NewsListViewController
@@ -46,10 +47,9 @@
         // Do any additional setup after loading the view.
 }
 -(void)onInitData{
-    UIImageView *bgImageView=[[UIImageView alloc]  initWithFrame:self.view.bounds];
-    bgImageView.tag=40000;
-    bgImageView.image=[UIImage imageNamed:@"Default-568h"];
-    [self.view addSubview:bgImageView];
+//    _bgImageView=[[UIImageView alloc]  initWithFrame:self.view.bounds];
+//    _bgImageView.image=[UIImage imageNamed:@"Default-568h"];
+//    [self.view addSubview:_bgImageView];
     self.navigationController.navigationBar.tintColor=HHBackgorundColor;
     self.view.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:self.contentView];
@@ -91,12 +91,12 @@
 
 -(void)getArtictleClassList{
     self.op=[[HHNetWorkEngine sharedHHNetWorkEngine]  getNewClassListOnCompletionHandler:^(HHResponseResult *responseResult) {
-        UIImageView *imgView=(UIImageView *)[self.view viewWithTag:4000];
-        [imgView removeFromSuperview];
+//        [_bgImageView removeFromSuperview];
+//        _bgImageView=nil;
         if ([responseResult.responseCode isEqualToString:CODE_STATE_100]) {
             self.contentView.dataArry=responseResult.responseData;
         }else{
-        
+        self.contentView.dataArry=[[HHDatabaseEngine sharedDBEngine] getNewsClassListFromDB];
         }
         
     } onErrorHandler:^(NSError *error) {
